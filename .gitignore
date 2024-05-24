@@ -9,6 +9,7 @@ package.json
 logs
 *.log
 logs/*.log
+alvo.html
 
 # Diretórios de sistema operacional
 .DS_Store
