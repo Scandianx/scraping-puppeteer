@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+package.json
+# Logs
+logs
+*.log
+logs/*.log
+
+# Diretórios de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Directorios temporários
+tmp/
+temp/
+.cache/
+
+# Diretório de build
+dist/
+build/
+
+# Outras ignorações específicas de projeto
+coverage/
+*.bak
+*.orig
+*.old
