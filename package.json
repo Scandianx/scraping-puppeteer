@@ -1,7 +1,7 @@
 {
   "name": "scrp",
   "version": "1.0.0",
-  "description": "",
+  "description": "��#\u0000 \u0000H\u0000o\u0000w\u0000 \u0000t\u0000o\u0000 \u0000s\u0000c\u0000r\u0000a\u0000p\u0000 \u0000w\u0000i\u0000t\u0000h\u0000 \u0000p\u0000u\u0000p\u0000p\u0000e\u0000t\u0000e\u0000e\u0000r\u0000 \u0000a\u0000n\u0000d\u0000 \u0000n\u0000o\u0000d\u0000e\u0000.\u0000j\u0000s\u0000\r\u0000 \u0000",
   "main": "scrapping.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^22.9.0"
+    "puppeteer": "^22.10.0",
+    "xlsx": "^0.18.5"
   }
 }

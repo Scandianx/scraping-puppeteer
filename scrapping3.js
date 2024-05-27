@@ -20,11 +20,36 @@ function sleep(ms) {
     await page.waitForSelector('#lnkDadosAbertos', { timeout: 30000 });
     await page.click('#lnkDadosAbertos');
     console.log("clicou no button");
-    await sleep(20000);
-    await page.waitForSelector('#gridPessoal_DXDataRow25 .dxgv.align_right');
-    console.log("700 no meu bolso hoje ainda");
+    await sleep(60000);
+    const frame = await page.frames().find(f => f.name() === 'iframe');
+    const button = await frame.$('#divGridListaPessoal');
+    console.log(button)
+
+    for (let i = 0; i <= 10; i++) {
+      const selector = `#gridPessoal_DXDataRow${i} > td:nth-child(3) > div`;
+      const element3 = await page.$(selector);
+      const element4 = await page.$$(selector);
+      if (element3 || element4) {
+        console.log(element3)
+        console.log(element4 + e)
+      }
+      else {
+        console.log("não encontrou o elemento")
+      }
+    }
+    
+
+    
+    const selector = `#gridPessoal_DXDataRow0 > td:nth-child(3) > div`;
+    const element3 = await page.$(selector);
+    console.log(element3);
+  
+  console.log("kkkkkkkkkkkk como sou burro")
     const element = await page.evaluate(() => {
-      const targetElement = document.querySelector('/html/body/form/div[3]/div/div[2]/div[5]/table[@id="gridPessoal"]/tbody/tr/td/div[1]/table/tbody/tr[3]/td[@id="gridPessoal_DXDataRow3"]');
+      
+      let table = document.getElementById('#divGridListaPessoal');
+      console.log(table)
+      const targetElement = document.querySelector('#divGridListaPessoal')
       if (targetElement) {
         console.log("fe");
         return targetElement.textContent; // Example: extract text content
